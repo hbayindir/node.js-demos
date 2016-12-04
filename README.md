@@ -9,5 +9,14 @@ This repository is based on my Node.js examples that I've written. This reposito
 - `events.js`: Demonstrates the event structure of the Node.js.
 - `multipleEvents.js`: Demonstrates multiple event handlers per event.
 
-##ÂNPM Dependencies
-This demo uses [`glob`](https://github.com/isaacs/node-glob) by isaacs. I bundled a version in the git, the demo is not tied to specific version. `glob` is used by `autoIndexer` to search for `js` files. 
+## Dependencies
+
+- Demo is developed in Node's LTS version obtained from official repositories.
+- This demo uses [`glob`](https://github.com/isaacs/node-glob) by isaacs. I bundled a version in the git however, the demo is not tied to specific version. `glob` is used by `autoIndexer` to search for `js` files.
+
+## Running the Demo
+Running the demo is easy.
+
+1. Clone the repository.
+2. Navigate to `src` directory.
+3. Start the demo with `node main.js`. It should start.

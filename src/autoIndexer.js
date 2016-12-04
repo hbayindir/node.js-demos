@@ -52,6 +52,10 @@ function scanFolder (folderName, extensionToFilter)
 
     console.log ("INFO: scanFolder got the following files: " + filesToReturn);
 
+    // Filter the unwanted files. This file itself and main.js will be removed.
+    filesToReturn.splice(filesToReturn.indexOf("main.js"), 1);
+    filesToReturn.splice(filesToReturn.indexOf("autoIndexer.js"), 1);
+
     return filesToReturn;
 }
 

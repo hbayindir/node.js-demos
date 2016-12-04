@@ -33,8 +33,7 @@ function httpRequestHandler (request, response)
     // Send the HTTP status OK (200) and content (text/plain)
     response.writeHead(200, {'Content-Type': 'text/html'});                    
     
-    // Request the root document.
-    
+    // User requests the events demo.
     if (request.url === "/events.js")
     {
         // Send the HTTP status OK (200) and content (text/plain)
@@ -44,7 +43,8 @@ function httpRequestHandler (request, response)
         response.end(eventDemo.startDemo());
     }
     
-    if (request.url === "/multipleEvents.js")
+    // User requests multiple events demo.
+    else if (request.url === "/multipleEvents.js")
     {
         // Send the HTTP status OK (200) and content (text/plain)
         response.writeHead(200, {'Content-Type': 'text/plain'});
@@ -54,7 +54,7 @@ function httpRequestHandler (request, response)
     }
     
     // Prevent hammering and return to main page every time.
-    //if (request.url === "/" || request.url === "/main.js")
+    // Request the root document.
     else
     {
         // Send the HTTP status OK (200) and content (text/plain)
@@ -63,7 +63,6 @@ function httpRequestHandler (request, response)
         // Generate the index document and return to requester.
         response.end(autoIndexer.generateIndex());
     }
-
 }
 
 // The callback funtion you provide is automatically added to 'request' event.
