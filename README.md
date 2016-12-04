@@ -9,6 +9,7 @@ This repository is based on my Node.js examples that I've written. This reposito
 - `events.js`: Demonstrates the event structure of the Node.js.
 - `multipleEvents.js`: Demonstrates multiple event handlers per event.
 - `syncAndAsync.js`: Shows behavior of synchronized and asynchronized calls.
+- `buffers.js`: Show some capabilities of buffers in Node.js.
 
 ## Dependencies
 
