@@ -4,10 +4,11 @@ This repository is based on my Node.js examples that I've written. This reposito
 
 ## List of Demos
 
-- `main.js`: Runs a web server and provides event handling and path based redirection. Currently a little primitive but, works. 
+- `main.js`: Runs a web server and provides event handling and path based redirection. Currently a little primitive, but works. 
 - `autoIndexer.js`: Generates the main page of the application. Searches for `js` files and creates the HTML file to show.
 - `events.js`: Demonstrates the event structure of the Node.js.
 - `multipleEvents.js`: Demonstrates multiple event handlers per event.
+- `syncAndAsync.js`: Shows behavior of synchronized and asynchronized calls.
 
 ## Dependencies
 

@@ -23,6 +23,8 @@ var httpServer = require("http"); // Will serve itself over http://.
 var autoIndexer = require("./autoIndexer.js");
 var eventDemo = require("./events.js");
 var multipleEventsDemo = require("./multipleEvents.js");
+var syncAndAsyncDemo = require("./syncAndAsync.js");
+var buffersDemo = require("./buffers.js");
 
 function httpRequestHandler (request, response)
 {
@@ -40,7 +42,7 @@ function httpRequestHandler (request, response)
         response.writeHead(200, {'Content-Type': 'text/plain'});
 
         // Call the function that brings the demo in.
-        response.end(eventDemo.startDemo());
+        eventDemo.startDemo(response);
     }
     
     // User requests multiple events demo.
@@ -50,9 +52,29 @@ function httpRequestHandler (request, response)
         response.writeHead(200, {'Content-Type': 'text/plain'});
 
         // Call the function that brings the demo in.
-        response.end(multipleEventsDemo.startDemo());
+        multipleEventsDemo.startDemo(response);
     }
     
+    // User requests sync and async calls demo.
+    else if (request.url === "/syncAndAsync.js")
+    {
+        // Send the HTTP status OK (200) and content (text/plain)
+        response.writeHead(200, {'Content-Type': 'text/plain'});
+
+        // Call the function that brings the demo in.
+        syncAndAsyncDemo.startDemo(response);
+    }
+    
+    // User requests sync and async calls demo.
+    else if (request.url === "/buffers.js")
+    {
+        // Send the HTTP status OK (200) and content (text/plain)
+        response.writeHead(200, {'Content-Type': 'text/plain'});
+
+        // Call the function that brings the demo in.
+        buffersDemo.startDemo(response);
+    }
+
     // Prevent hammering and return to main page every time.
     // Request the root document.
     else
